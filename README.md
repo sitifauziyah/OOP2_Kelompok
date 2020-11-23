@@ -3,3 +3,7 @@
 NIM : 18090019
 Nama : Siti Fauziyah
 Kelas : 5B
+
+NIM : 18090049
+Nama : Titis Eka Setyawati
+Kelas : 5B
