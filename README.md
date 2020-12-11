@@ -12,4 +12,9 @@ NIM : 19092002
 Nama : Ajeng Tresna Azizah
 Kelas : 5B
 
+Data Karyawan
+
+
 Data Sepatu
+
+Data Pelanggan
