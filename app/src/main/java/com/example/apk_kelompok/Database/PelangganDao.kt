@@ -15,4 +15,7 @@ interface PelangganDao {
 
     @Query("SELECT * FROM pelanggan")
     suspend fun getAllPelanggan(): List<Pelanggan>
+
+    @Query("SELECT * FROM pelanggan WHERE id=:pelanggan_id")
+    suspend fun getPelanggan(pelanggan_id: Int) : List<Pelanggan>
 }

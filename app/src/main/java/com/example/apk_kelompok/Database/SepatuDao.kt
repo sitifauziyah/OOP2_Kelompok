@@ -15,4 +15,7 @@ interface SepatuDao {
 
     @Query("SELECT * FROM sepatu")
     suspend fun getAllSepatu(): List<Sepatu>
+
+    @Query("SELECT * FROM sepatu WHERE id=:Sepatu_id")
+    suspend fun getSepatu(Sepatu_id: Int) : List<Sepatu>
 }
