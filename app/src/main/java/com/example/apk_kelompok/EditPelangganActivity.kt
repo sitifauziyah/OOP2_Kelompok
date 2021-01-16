@@ -33,6 +33,14 @@ class EditPelangganActivity : AppCompatActivity() {
                 finish()
             }
         }
+        btn_updatePelanggan.setOnClickListener {
+            CoroutineScope(Dispatchers.IO).launch {
+                db.PelangganDao().updatePelanggan(
+                    Pelanggan(pelangganId, txt_nama.text.toString(), txt_nohp.text.toString())
+                )
+                finish()
+            }
+        }
     }
 
     fun setupView() {
@@ -40,9 +48,14 @@ class EditPelangganActivity : AppCompatActivity() {
         val intentType = intent.getIntExtra("intent_type", 0)
         when (intentType) {
             Constant.TYPE_CREATE -> {
-
+                btn_updatePelanggan.visibility = View.GONE
             }
             Constant.TYPE_READ -> {
+                btn_savePelanggan.visibility = View.GONE
+                btn_updatePelanggan.visibility = View.GONE
+                getPelanggan()
+            }
+            Constant.TYPE_UPDATE -> {
                 btn_savePelanggan.visibility = View.GONE
                 getPelanggan()
             }

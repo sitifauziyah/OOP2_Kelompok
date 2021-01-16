@@ -27,6 +27,9 @@ class PelangganAdapter (private val AllPelanggan: ArrayList<Pelanggan>, private 
         holder.view.icon_delete.setOnClickListener {
             listener.onDelete(pelanggann)
         }
+        holder.view.icon_edit.setOnClickListener {
+            listener.onUpdate(pelanggann)
+        }
 
     }
 
@@ -41,6 +44,7 @@ class PelangganAdapter (private val AllPelanggan: ArrayList<Pelanggan>, private 
     interface OnAdapterListener {
         fun onClick(pelanggan: Pelanggan)
         fun onDelete(pelanggan: Pelanggan)
+        fun onUpdate(pelanggan: Pelanggan)
     }
 
 }

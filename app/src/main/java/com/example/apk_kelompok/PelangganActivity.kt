@@ -52,13 +52,16 @@ class PelangganActivity : AppCompatActivity() {
     }
 
     fun setupRecyclerView() {
-        pelangganAdapter = PelangganAdapter(arrayListOf(), object: PelangganAdapter.OnAdapterListener {
+        pelangganAdapter = PelangganAdapter(arrayListOf(), object : PelangganAdapter.OnAdapterListener {
             override fun onClick(pelanggan: Pelanggan) {
                 intentEdit(pelanggan.id, Constant.TYPE_READ)
             }
 
             override fun onDelete(pelanggan: Pelanggan) {
                 deleteDialog(pelanggan)
+            }
+            override fun onUpdate(pelanggan: Pelanggan) {
+                intentEdit(pelanggan.id, Constant.TYPE_UPDATE)
             }
 
         })
