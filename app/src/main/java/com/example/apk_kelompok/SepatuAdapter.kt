@@ -26,6 +26,9 @@ class SepatuAdapter (private val AllSepatu: ArrayList<Sepatu>, private val liste
         holder.view.icon_delete.setOnClickListener {
             listener.onDelete(sepatu)
         }
+        holder.view.icon_edit.setOnClickListener {
+            listener.onUpdate(sepatu)
+        }
     }
 
     class SepatuViewHolder(val view: View) : RecyclerView.ViewHolder(view)
@@ -39,5 +42,6 @@ class SepatuAdapter (private val AllSepatu: ArrayList<Sepatu>, private val liste
     interface OnAdapterListener {
         fun onClick(sepatu: Sepatu)
         fun onDelete(sepatu: Sepatu)
+        fun onUpdate(sepatu: Sepatu)
     }
 }

@@ -56,6 +56,9 @@ class SepatuActivity : AppCompatActivity() {
             override fun onDelete(sepatu: Sepatu) {
                 deleteDialog(sepatu)
             }
+            override fun onUpdate(sepatu: Sepatu) {
+                intentEdit(sepatu.id, Constant.TYPE_UPDATE)
+            }
         })
         list_sepatu.apply {
             layoutManager = LinearLayoutManager(applicationContext)
@@ -63,10 +66,10 @@ class SepatuActivity : AppCompatActivity() {
         }
     }
 
-    fun intentEdit(helmId: Int, intentType: Int ) {
+    fun intentEdit(sepatuId: Int, intentType: Int ) {
         startActivity(
             Intent(applicationContext, EditSepatuActivity::class.java)
-                .putExtra("intent_id", helmId)
+                .putExtra("intent_id", sepatuId)
                 .putExtra("intent_type", intentType)
         )
     }
