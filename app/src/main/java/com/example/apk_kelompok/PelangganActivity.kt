@@ -9,9 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.apk_kelompok.Database.AppRoomDB
 import com.example.apk_kelompok.Database.Constant
 import com.example.apk_kelompok.Database.Pelanggan
-import com.example.apk_kelompok.Database.Sepatu
 import kotlinx.android.synthetic.main.activity_pelanggan.*
-import kotlinx.android.synthetic.main.activity_sepatu.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

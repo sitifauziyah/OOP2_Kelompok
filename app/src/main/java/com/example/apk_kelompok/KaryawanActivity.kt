@@ -1,9 +1,11 @@
 package com.example.apk_kelompok
 
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.apk_kelompok.Database.AppRoomDB
@@ -22,7 +24,7 @@ class KaryawanActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_pelanggan)
+        setContentView(R.layout.activity_karyawan)
         setupListener()
         setupRecyclerView()
     }

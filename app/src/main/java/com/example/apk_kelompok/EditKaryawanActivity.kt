@@ -3,12 +3,11 @@ package com.example.apk_kelompok
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import com.example.apk_kelompok.Database.AppRoomDB
 import com.example.apk_kelompok.Database.Constant
 import com.example.apk_kelompok.Database.Karyawan
 import kotlinx.android.synthetic.main.activity_edit_karyawan.*
-import kotlinx.android.synthetic.main.activity_edit_karyawan.txt_nama
-import kotlinx.android.synthetic.main.activity_edit_pelanggan.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -26,7 +25,6 @@ class EditKaryawanActivity : AppCompatActivity() {
     }
 
     fun setupListener(){
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         btn_saveKaryawan.setOnClickListener{
             CoroutineScope(Dispatchers.IO).launch {
                 db.KaryawanDao().addKaryawan(

@@ -19,16 +19,16 @@ class KaryawanAdapter (private val AllKaryawan: ArrayList<Karyawan>, private val
     override fun getItemCount() = AllKaryawan.size
 
     override fun onBindViewHolder(holder: KaryawanViewHolder, position: Int) {
-        val karyawann = AllKaryawan[position]
-        holder.view.text_nama.text = karyawann.nama
+        val karyawan = AllKaryawan[position]
+        holder.view.text_nama.text = karyawan.nama
         holder.view.text_nama.setOnClickListener {
-            listener.onClick(karyawann)
+            listener.onClick(karyawan)
         }
         holder.view.icon_delete.setOnClickListener {
-            listener.onDelete(karyawann)
+            listener.onDelete(karyawan)
         }
         holder.view.icon_edit.setOnClickListener {
-            listener.onUpdate(karyawann)
+            listener.onUpdate(karyawan)
         }
 
     }
