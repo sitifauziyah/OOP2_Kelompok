@@ -15,4 +15,7 @@ interface KaryawanDao {
 
     @Query("SELECT * FROM karyawan")
     suspend fun getAllKaryawan(): List<Karyawan>
+
+    @Query("SELECT * FROM karyawan WHERE id=:karyawan_id")
+    suspend fun getKaryawan(karyawan_id: Int) : List<Karyawan>
 }

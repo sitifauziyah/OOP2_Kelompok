@@ -31,4 +31,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_sepatu" />
 
+    <Button
+        android:id="@+id/btn_karyawan"
+        android:layout_width="250dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="236dp"
+        android:text="Karyawan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
